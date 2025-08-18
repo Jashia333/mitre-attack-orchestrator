@@ -35,7 +35,7 @@ def extract_iocs(text: str) -> List[IOC]:
         if dom:
             found.append(IOC(type="domain", value=dom))
 
-    # De-dupe (case-insensitive on value + type)
+    # case sensitive  value type
     seen, out = set(), []
     for i in found:
         k = (i.type, i.value.lower())
