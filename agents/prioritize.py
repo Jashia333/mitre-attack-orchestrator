@@ -14,7 +14,9 @@ def score(alert: Alert) -> Alert:
     if any(f.reputation == "malicious" for f in alert.osint.values()):
         s += 0.2
 
-   
+    # MITRE signal
+    if alert.mitre:
+        s += 0.2
 
     alert.severity = (
         "critical" if s >= 0.8 else
