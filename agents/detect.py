@@ -2,6 +2,8 @@
 from storage.schema import Detection
 from langchain_core.prompts import PromptTemplate
 import json, re, os
+from dotenv import load_dotenv
+load_dotenv() 
 
 # Providers (optional imports guarded)
 PROVIDER = None

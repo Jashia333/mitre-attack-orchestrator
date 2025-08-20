@@ -1,0 +1,10 @@
+langgraph
+langchain
+langchain-openai    # or your provider
+fastapi
+uvicorn
+pydantic
+regex
+spacy               # optional NER; python -m spacy download en_core_web_sm
+elasticsearch       # or opensearch-py; or skip and use sqlite3
+python-dotenv
